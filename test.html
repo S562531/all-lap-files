@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blockly Web App</title>
+    <!-- Include Blockly library -->
+    <script src="https://unpkg.com/blockly@4.0.0/blockly_compressed.js"></script>
+    <!-- Include Blockly's JavaScript generator for your target language -->
+    <script src="https://unpkg.com/blockly@4.0.0/javascript_compressed.js"></script>
+    <!-- Include Blockly's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/blockly@4.0.0/blockly.css">
+</head>
+<body>
+    <h1>Blockly Web App</h1>
+    <button id="generateCodeButton">Generate Code</button>
+    <div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
+    <pre id="codeOutput"></pre>
+    <script>
+        
+    </script>
+
+    <script>
+      //  var workspace = Blockly.inject('blocklyDiv', {
+    //media: 'https://unpkg.com/blockly@4.0.0/media/',
+   // toolbox: '<xml id="toolbox" style="display:none">' +
+        //'<block type="custom_block"></block>' +
+    //'</xml>'
+//});
+
+// Define a custom block
+//Blockly.Blocks['custom_block'] = {
+    init: function() {
+        this.jsonInit({
+            "type": "custom_block",
+            "message0": "Custom Block %1 %2",
+            "args0": [
+                {
+                    "type": "input_value",
+                    "name": "VALUE",
+                    "check": "Number"
+                },
+                {
+                    "type": "input_statement",
+                    "name": "STATEMENTS"
+                }
+            ],
+            "colour": 230,
+            "tooltip": "Custom block tooltip",
+            "helpUrl": ""
+        });
+    }
+};
+
+// Generate code when the "Generate Code" button is clicked
+document.getElementById('generateCodeButton').addEventListener('click', function() {
+    var code = Blockly.JavaScript.workspaceToCode(workspace);
+    document.getElementById('codeOutput').textContent = code;
+});
+
+
+
+
+    </script>
+</body>
+</html>

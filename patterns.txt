@@ -1,0 +1,15 @@
+ Node current4 = head;
+
+        Node prevNode2 = null;
+
+        while (current4.next != null) {
+
+        	prevNode2 = current4;
+
+        	current4 = current4.next;
+
+        }
+
+        prevNode1.next = null;
+
+        printList(head);

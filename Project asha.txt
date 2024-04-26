@@ -1,0 +1,23 @@
+asha:
+
+A chatbot is like a digital conversation partner created by computer programs. It's designed to engage with people, typically over the internet, in a way that mimics human conversation. This means it can understand and respond to natural language inputs, allowing users to interact with it as if they were chatting with another person.
+
+These virtual assistants find applications on different platforms such as websites, messaging apps, and voice interfaces. Their purpose is to provide users with information, assistance, or perform specific tasks through a dynamic and conversational interaction. By leveraging artificial intelligence and natural language processing, chatbots aim to make human-computer communication more intuitive and user-friendly.
+
+Pravalika:
+
+Libraries sometimes struggle to help people find information easily. The old-fashioned ways of getting help, like asking a person or looking at static (unchanging) online resources, aren't always quick or helpful. People might have a hard time finding what they need or figuring out how to use library services. To make things better, we need a smart computer program (chatbot) that can talk to people, understand what they're looking for, and provide personalized help in real-time. This way, everyone can have a smoother and more enjoyable experience when using the library.
+
+Tools:
+Developed by Google, Dialogflow is a popular natural language processing (NLP) platform for building chatbots and conversational interfaces.
+
+Developed by Microsoft, the Bot Framework is a comprehensive set of tools, services, and SDKs for building conversational bots.
+
+Acquired by Facebook, Wit.ai is an open-source natural language processing platform.
+It allows developers to build applications that can understand and interpret human language. It's often used for creating chatbots, voice interfaces, and other applications with natural language understanding capabilities.
+
+It provides tools for creating chatbots that can understand and respond to user inputs, integrating with different platforms and services.
+
+Rasa is an open-source conversational AI platform that allows developers to build, train, and deploy chatbots.
+
+

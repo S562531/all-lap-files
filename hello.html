@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drag and Drop Block Code</title>
+    <style>
+        /* Styles for blocks and workspace */
+        .block {
+            width: 100px;
+            height: 30px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            margin: 10px;
+            cursor: grab;
+        }
+
+        .workspace {
+            width: 400px;
+            height: 300px;
+            border: 2px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="blockContainer">
+        <!-- Draggable blocks -->
+        <div class="block" draggable="true" id="block1">Block 1</div>
+        <div class="block" draggable="true" id="block2">Block 2</div>
+        <div class="block" draggable="true" id="block3">Block 3</div>
+    </div>
+
+    <div id="workspace" class="workspace" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+    <script>
+        // Define the drag and drop event handlers
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        function drag(event) {
+            event.dataTransfer.setData("text", event.target.id);
+        }
+
+        function drop(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("text");
+            var block = document.getElementById(data);
+            event.target.appendChild(block);
+        }
+
+        // Add drag event listeners to draggable blocks
+        var blocks = document.querySelectorAll('.block');
+        blocks.forEach(function(block) {
+            block.addEventListener('dragstart', drag);
+        });
+    </script>
+</body>
+</html>
